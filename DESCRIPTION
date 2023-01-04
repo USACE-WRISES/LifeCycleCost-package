@@ -1,0 +1,24 @@
+Package: lcca
+Title: Life cycle cost analysis for cost engineering
+Version: 1.0.0
+Published: 
+Authors@R: 
+        c(person(given = "Liya", family = "Abera", , "liya.eshetu.abera@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0000-0000-0000")),
+        person(given = "S. Kyle", family = "McKay",
+           role = c("aut"),
+           email = "kyle.mckay@usace.army.mil",
+           comment = c(ORCID = "0000-0003-2703-3841")))
+Maintainer: Liya Abera <liya.eshetu.abera@gmail.com>
+Description: This package computes life cycle cost typical in civil infrastructure and  
+    ecosystem restoration projects. Standard cost engineering and engineering 
+    economics methods are applied to convert between present, future, and annualized costs.
+License: `use_mit_license()`, `use_gpl3_license()` 
+URL: GitHub (<https://github.com/USACE-WRISES>)
+Vignettes: Original documentation can be found in Abera and McKay (2023, ebook).
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Depends: 
+    R (>= 4.1.0)
+LazyData: true
