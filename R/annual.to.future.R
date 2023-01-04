@@ -1,30 +1,29 @@
-#' Calculate future value from uniform series annual value
-#' using uniform series compound amount factor (uscaf) 
+#' Calculate future value from uniform annual payment
 #'  
-#' \code{annual.to.future} Compute future values from uniform annual payment
+#' \code{annual.to.future} Compute future values from uniform annual payments
 #'      using uniform series compound amount factor (uscaf)  
 #'     
-#' @param discount rate (dr)
-#' @param life span in years (yr)
-#' @param a series of uniform payment (ann)
+#' @param dr discount rate in percent per year
+#' @param span life span in years
+#' @param ann series of uniform annual payments
 #'
-#' @return Future value  
+#' @return Cost in future value 
 #'
 #' @references
 #' Newnan, Donald G., Ted G. Eschenbach, and Jerome P. Lavelle. 
-#' Engineering economic analysis. Vol. 12. Oxford University Press, 2012
+#'      Engineering economic analysis. Vol. 12. Oxford University Press, 2012
 #'  
 #' @examples  
-#' # Result: fr.value 
-#' fr.value(0.08, 5000, 30)  
+#' # Result: Future Value = $566,416
+#' annual.to.future(0.08, 30, 5000)  
 #' 
-
-annual.to.future <- function(dr, ann, yr){
+#' @export
+annual.to.future <- function(dr, span, ann){
   # compute uniform series compound amount factor
-  uscaf <-((1+dr)^yr-1)/dr
+  uscaf <- ((1+dr)^span - 1) / dr
   
   # compute future value of costs
-  fr.value <-(ann)(uscaf)
+  fr.value <- ann * uscaf
   
   #Compute total future value
   sum(fr.value)
