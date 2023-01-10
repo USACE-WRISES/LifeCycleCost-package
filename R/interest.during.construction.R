@@ -1,19 +1,22 @@
-#' compute interest during construction (idc)
+#' Compute interest during construction 
+#'  
+#' \code{interest.during.construction} calculate interest during construction 
+#'       using monthly discount factor 
 #' 
-#Function for computing interest during construction based on:
-#'@input first/capital cost (Ccos)
-#'@input Construction duration in months (durm)
-#'@input annual interest rate (ir)
+#'@param i interest rate in percent per year
+#'@param duration construction duration in months
+#'@param capital first/capital cost
 #'
-#'@return  idc.month
+#'@return  idc
 #'
 #'@references
 #'
 #' @examples  
-#' # Result: idc.month
-#' idc.month(0.08, 40000, 25) 
-
-idc <- function(ir, Fcos, durm){
+#' # Result: idc
+#' interest.during.construction (0.08,25,700000)
+#' 
+#' #' @export 
+interest.during.construction <- function (i, duration, capital){
   #Compute monthly discount factor
   dr.month <- (1+ir)^(1/12) - 1
   
@@ -21,7 +24,10 @@ idc <- function(ir, Fcos, durm){
   idc.month <- (Ccap/durm)*((1+dr.month)^(durm-seq(1,durm))-1)
   
   #Compute total idc 
-  sum(idc.month)
+  idc <- sum(idc.month)
+  
+  #Send the output
+  idc
 }
 
 
