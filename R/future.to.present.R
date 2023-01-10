@@ -1,31 +1,33 @@
 #' Compute present values from future payments (or cashflow)
-#' using present worth factor (pwf) 
 #'  
-#' \code{Pr.value.fv} calculate present value from future payments  
-#'     
-#'Function for computing present value based on:
-#'@input discount rate (dr)
-#'@input life span in years (yr)
-#'@input future payments (fv)
+#' \code{future.to.present} calculate present value from future value using 
+#'      present worth factor (pwf) 
 #'
-#' @return Pr.value.fv 
+#' @param dr discount rate in percent per year
+#' @param span life span in years
+#' @param fr.value future value
 #'
-#'@references
-#'Newnan, Donald G., Ted G. Eschenbach, and Jerome P. Lavelle. 
-#'Engineering economic analysis. Vol. 12. Oxford University Press, 2012.
+#' @return Pr.value 
+#'
+#' @references
+#' Newnan, Donald G., Ted G. Eschenbach, and Jerome P. Lavelle. 
+#'      Engineering economic analysis. Vol. 12. Oxford University Press, 2012
 #'  
 #' @examples  
-#' # Result: Pr.value.fv
-#' Pr.value.fr(0.08, 3000, 30)  
+#' # Result: Pr.value
+#' future.to.present(0.08, 30, 30000)  
 #' 
-
-Pr.value <- function(dr, fv, yr){
+#' @export
+future.to.present <- function(dr, span, fr.value){
   # compute present worth factor
   pwf <-1/((1+dr)^yr)
   
   # compute present value of costs
-  Pr.value.fr <-(fv)(pwf)
+  Pr.value <- fr.value * pwf
   
   #Compute total present value
-  sum(Pr.value.fr)
+  sum(Pr.value)
+  
+  #Send the output
+  pr.value
 }
