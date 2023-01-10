@@ -14,8 +14,8 @@
 #'      Engineering economic analysis. Vol. 12. Oxford University Press, 2012
 #'  
 #' @examples  
-#' # Result: Future Value = $566,416
-#' annual.to.future(0.08, 30, 5000)  
+#' # Result: Future Value 
+#' annual.to.future(0.08, 30, 50000)  
 #' 
 #' @export
 annual.to.future <- function(dr, span, ann){
@@ -27,4 +27,7 @@ annual.to.future <- function(dr, span, ann){
   
   #Compute total future value
   sum(fr.value)
+
+  #Send the output
+  fr.value
 }

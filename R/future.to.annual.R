@@ -3,7 +3,7 @@
 #' \code{future.to.annual} calculate annual value from future value using
 #'      the accumulated amount after years using sinking fund factor (sff) 
 #'     
-#' @param dr discount rate
+#' @param dr discount rate in percent per year
 #' @param span life span in years
 #' @param fr.value accumulated (future) amount 
 #'
