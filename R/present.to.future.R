@@ -20,7 +20,7 @@
 #' @export
 present.to.future <- function(dr, span, pv.value){
   # compute compound amount factor 
-  caf <-(1+dr)^yr
+  caf <-(1+dr)^span
   
   # compute future value of costs
   fr.value <- pv.value * caf
