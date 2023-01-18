@@ -3,31 +3,31 @@
 #' \code{future.to.present} calculate present value from future value using 
 #'      present worth factor (pwf) 
 #'
-#' @param dr discount rate in percent per year
-#' @param span life span in years
-#' @param fr.value future value
+#' @param i discount rate in percent per year
+#' @param n life span in years
+#' @param FV future value
 #'
-#' @return Pr.value 
+#' @return PV 
 #'
 #' @references
 #' Newnan, Donald G., Ted G. Eschenbach, and Jerome P. Lavelle. 
 #'      Engineering economic analysis. Vol. 12. Oxford University Press, 2012
 #'  
 #' @examples  
-#' # Result: Pr.value
+#' # Result: PV
 #' future.to.present(0.08, 30, 30000)  
 #' 
 #' @export
-future.to.present <- function(dr, span, fr.value){
+future.to.present <- function(i, n, FV){
   # compute present worth factor
-  pwf <-1/((1+dr)^yr)
+  pwf <-1/((1+i)^yr)
   
   # compute present value of costs
-  Pr.value <- fr.value * pwf
+  PV <- FV * pwf
   
   #Compute total present value
-  sum(Pr.value)
+  sum(PV)
   
   #Send the output
-  pr.value
+  PV
 }
