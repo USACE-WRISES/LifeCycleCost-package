@@ -7,27 +7,27 @@
 #' @param n life span in years
 #' @param FV future value
 #'
-#' @return PV 
+#' @return pr.value 
 #'
 #' @references
 #' Newnan, Donald G., Ted G. Eschenbach, and Jerome P. Lavelle. 
 #'      Engineering economic analysis. Vol. 12. Oxford University Press, 2012
 #'  
 #' @examples  
-#' # Result: PV
+#' # Result: pr.value
 #' future.to.present(0.08, 30, 30000)  
 #' 
 #' @export
 future.to.present <- function(i, n, FV){
   # compute present worth factor
-  pwf <-1/((1+i)^yr)
+  pwf <-1/((1+i)^n)
   
   # compute present value of costs
-  PV <- FV * pwf
+  pr.value <- FV * pwf
   
   #Compute total present value
-  sum(PV)
+  sum(pr.value)
   
   #Send the output
-  PV
+  pr.value
 }
