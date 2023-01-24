@@ -1,6 +1,6 @@
-#' Calculate present value from uniform gradient payment 
+#' Calculate future value from uniform gradient payment 
 #'  
-#' \code{gradient.to.future} Compute present value from uniform gradient payments 
+#' \code{gradient.to.future} Compute future value from uniform gradient payments 
 #'      using uniform gradient present worth factor (ugfw)
 #'      
 #' @param i discount rate in percent per year
@@ -14,8 +14,8 @@
 #'      Engineering economic analysis. Vol. 12. Oxford University Press, 2012.
 #'  
 #' @examples  
-#' # Result: fr.value = $
-#' gradient.to.future(0.08, 30, )  
+#' # Result: fr.value = $ 312,312
+#' gradient.to.future(0.08, 30,300)  
 #' 
 #' @export
 gradient.to.future <- function(i, n, G){
