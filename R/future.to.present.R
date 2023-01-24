@@ -14,7 +14,7 @@
 #'      Engineering economic analysis. Vol. 12. Oxford University Press, 2012
 #'  
 #' @examples  
-#' # Result: pr.value
+#' # Result: pr.value = 2981.32
 #' future.to.present(0.08, 30, 30000)  
 #' 
 #' @export

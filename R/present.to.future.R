@@ -3,9 +3,9 @@
 #' \code{present.to.future} calculate future value from present value using
 #'      compound amount factor (caf)   
 #'     
-#' @param dr discount rate in percent per year
-#' @param span life span in years 
-#' @param pv.value present value
+#' @param i discount rate in percent per year
+#' @param n life span in years 
+#' @param PV present value
 #'
 #' @return fr.value
 #'
@@ -18,12 +18,12 @@
 #' present.to.future (0.08, 30, 900000)  
 #' 
 #' @export
-present.to.future <- function(dr, span, pv.value){
+present.to.future <- function(i, n, PV){
   # compute compound amount factor 
-  caf <-(1+dr)^span
+  caf <-(1+i)^n
   
   # compute future value of costs
-  fr.value <- pv.value * caf
+  fr.value <- PV * caf
   
   #Send the output
   fr.value
