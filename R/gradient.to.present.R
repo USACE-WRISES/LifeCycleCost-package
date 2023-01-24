@@ -1,4 +1,4 @@
-Calculate present value from uniform gradient payment 
+#' Calculate present value from uniform gradient payment 
 #'  
 #' \code{gradient.to.present} Compute present value from uniform gradient payments 
 #'      using uniform gradient present worth factor (ugwf)
@@ -20,10 +20,10 @@ Calculate present value from uniform gradient payment
 #' @export
 gradient.to.present <- function(i, n, G){
   # compute uniform series present worth factor
-  ugwf <-((1+i)^n-1) / (i^2 *(1+i)^n)-(n/i(1+i)^n)
+  ugwf <-((1+i)^n-1) / (i^2 *(1+i)^n)-(n/i*(1+i)^n)
   
   # compute present value of costs
-  pr.value <- A * uswf
+  pr.value <- G * ugwf
   
   #Compute total present value
   sum(pr.value)
