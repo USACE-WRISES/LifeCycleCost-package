@@ -21,7 +21,7 @@
 #'  
 #' @examples  
 #' # Result: pr.value = 310367.40
-#' gradient_to_present(0.08, 30, 3000)  
+#' gradient_to_present(0.08, 30, 3000)
 #' 
 #' @export
 gradient_to_present <- function(i, n, G){

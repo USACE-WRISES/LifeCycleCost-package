@@ -10,9 +10,14 @@
 #' @return FV 
 #'
 #' @references
-#' Newnan, Donald G., Ted G. Eschenbach, and Jerome P. Lavelle. 
-#'      Engineering economic analysis. Vol. 12. Oxford University Press, 2012
-#'  
+#'  Newnan, D. G., Eschenbach, T. G., Lavelle, J. P., & Oxford, N. Y. (2020). 
+#'         Engineering Economic Analysis (14th ed.). 
+#'         New York, Oxford University Press.    
+#' 
+#'  David, W., & Terry, R. (2012). 
+#'        Fundamentals of Engineering Economics and Decision Analysis. 
+#'        Springer Nature.
+#'         
 #' @examples  
 #' # Result: FV = 5664161
 #' annual_to_future(0.08, 30, 50000)  

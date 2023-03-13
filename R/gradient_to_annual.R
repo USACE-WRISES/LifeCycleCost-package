@@ -11,12 +11,17 @@
 #' @return ann.value
 #'
 #' @references
-#' Newnan, Donald G., Ted G. Eschenbach, and Jerome P. Lavelle. 
-#'      Engineering economic analysis. Vol. 12. Oxford University Press, 2012.
+#'  Newnan, D. G., Eschenbach, T. G., Lavelle, J. P., & Oxford, N. Y. (2020). 
+#'         Engineering Economic Analysis (14th ed.). 
+#'         New York, Oxford University Press.    
+#' 
+#'  David, W., & Terry, R. (2012). 
+#'        Fundamentals of Engineering Economics and Decision Analysis. 
+#'        Springer Nature.
 #'  
 #' @examples  
-#' # Result: ann.value = $
-#' gradient_to_annual(0.08, 30, )  
+#' # Result: ann.value = $ 105138.3
+#' gradient_to_annual(0.08, 30, 6000, 50000 )  
 #' 
 #' @export
 gradient_to_annual <- function(i, n, G, A){

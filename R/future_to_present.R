@@ -1,4 +1,4 @@
-#' Compute present values from future payments (or cashflow)
+#' Compute present values from future payments (or cash flow)
 #'  
 #' \code{future_to_present} calculate present value from future value using 
 #'      present worth factor (pwf) 
@@ -10,8 +10,13 @@
 #' @return pr.value 
 #'
 #' @references
-#' Newnan, Donald G., Ted G. Eschenbach, and Jerome P. Lavelle. 
-#'      Engineering economic analysis. Vol. 12. Oxford University Press, 2012
+#'  Newnan, D. G., Eschenbach, T. G., Lavelle, J. P., & Oxford, N. Y. (2020). 
+#'         Engineering Economic Analysis (14th ed.). 
+#'         New York, Oxford University Press.    
+#' 
+#'  David, W., & Terry, R. (2012). 
+#'        Fundamentals of Engineering Economics and Decision Analysis. 
+#'        Springer Nature.
 #'  
 #' @examples  
 #' # Result: pr.value = 2981.32
