@@ -19,7 +19,7 @@
 #'        Springer Nature.
 #'  
 #' @examples  
-#' # Result: fr.value = $ 312,312
+#' # Result: fr.value = $ 312312
 #' gradient_to_future(0.08, 30,300)  
 #' 
 #' @export
