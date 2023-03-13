@@ -10,10 +10,14 @@
 #'@return  idc
 #'
 #'@references
+#'Engineer, U. S. A., & Resources, W. (1993). 
+#'   National Economic Development (NED) Procedures Manual- National Development Costs. 
+#'   U.S. Army Corps of Engineers Humphreys Engineer Center Support 
+#'    Activity Institute for Water Resources, DACWC72-90(June).
 #'
 #'
 #' @examples  
-#' # Result: idc
+#' # Result: idc = 19402.14
 #' interest_during_construction (0.02758,25,700000)
 #' 
 #' #' @export 

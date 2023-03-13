@@ -1,4 +1,4 @@
-#' Calculate annual payment from present value 
+#' Compute annual payment from present value 
 #'  
 #' \code{present_to_annual} Compute uniform series annual payments from present value 
 #'      using capital recovery factor (crf) 
@@ -10,20 +10,25 @@
 #' @return ann.value
 #'
 #' @references
-#' Newnan, Donald G., Ted G. Eschenbach, and Jerome P. Lavelle. 
-#'      Engineering economic analysis. Vol. 12. Oxford University Press, 2012
+#' Newnan, D. G., Eschenbach, T. G., Lavelle, J. P., & Oxford, N. Y. (2020). 
+#'         Engineering Economic Analysis (14th ed.). 
+#'         New York, Oxford University Press.    
+#' 
+#'  David, W., & Terry, R. (2012). 
+#'        Fundamentals of Engineering Economics and Decision Analysis. 
+#'        Springer Nature.
 #'  
 #' @examples
-#' # Result: ann.value = $17765
+#' # Result: ann.value = $17765.49
 #' present_to_annual(0.08, 30, 200000)  
 #' 
 #' @export    
 present_to_annual <- function(i, n, PV){
-  # compute recovery factor
+  # compute capital recovery factor
   crf <-(i*(1+i)^n)/((1+i)^n-1)
   
   # compute annual costs
-  ann.value <-(PV)(crf)
+  ann.value <-PV * crf
   
   #Send the output
   ann.value
