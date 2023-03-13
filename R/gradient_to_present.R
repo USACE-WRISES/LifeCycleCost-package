@@ -10,12 +10,18 @@
 #' @return pr.value
 #'
 #' @references
-#' Newnan, Donald G., Ted G. Eschenbach, and Jerome P. Lavelle. 
-#'      Engineering economic analysis. Vol. 12. Oxford University Press, 2012.
+#' 
+#'  Newnan, D. G., Eschenbach, T. G., Lavelle, J. P., & Oxford, N. Y. (2020). 
+#'         Engineering Economic Analysis (14th ed.). 
+#'         New York, Oxford University Press.    
+#' 
+#'  David, W., & Terry, R. (2012). 
+#'        Fundamentals of Engineering Economics and Decision Analysis. 
+#'        Springer Nature.
 #'  
 #' @examples  
-#' # Result: pr.value =
-#' gradient_to_present(0.08, 30, 300 )  
+#' # Result: pr.value = 310367.40
+#' gradient_to_present(0.08, 30, 3000)  
 #' 
 #' @export
 gradient_to_present <- function(i, n, G){
