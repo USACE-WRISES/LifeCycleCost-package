@@ -1,7 +1,7 @@
 #' Compute effective annual interest rate for a known nominal rate and 
 #' compounding period per year 
 #'  
-#' \code{effective_i} Compute future value nominal rate and 
+#' \code{effective_interest_rate} Compute future value nominal rate and 
 #' compounding period per year, and frequency.
 #' 
 #' @param r nominal interest rate in decimal number
@@ -12,16 +12,16 @@
 #' @param i interest rate per period (r/m)
 #'
 #'
-#' @return effective_i
+#' @return effective_interest_rate
 #' 
 #' @references
-#'  Newnan, D. G., Eschenbach, T. G., Lavelle, J. P., & Oxford, N. Y. (2020). 
-#'         Engineering Economic Analysis (14th ed.). 
-#'         New York, Oxford University Press.    
+#'  Newnan, D. G., Eschenbach, T. G., Lavelle, J. P., & Oxford, N. Y. 
+#'         Engineering Economic Analysis, 14th ed. 
+#'         New York, Oxford University Press, 2020    
 #' 
-#'  David, W., & Terry, R. (2012). 
+#'  David, W., & Terry, R. 
 #'        Fundamentals of Engineering Economics and Decision Analysis. 
-#'        Springer Nature.
+#'        Springer Nature, 2012
 #'      
 #' @examples  
 #' # Result: effective_i = 
