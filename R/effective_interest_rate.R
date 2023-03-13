@@ -25,7 +25,7 @@
 #'      
 #' @examples  
 #' # Result: effective_i = 
-#' effective_i (0.08, m = "yearly")  
+#' effective_interest_rate (0.08, m = "yearly")  
 #' 
 #' @export
 effective_interest_rate <- function(r, m = c("yearly", "quarterly", "monthly")){
